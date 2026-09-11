@@ -1,0 +1,58 @@
+document.addEventListener("DOMContentLoaded", async () => {
+  const statusBox = document.getElementById("confirm-status");
+  const message = document.getElementById("confirm-message");
+
+  const hash = window.location.hash;
+  const code = hash.replace("#code=", "").trim();
+
+  if (!code || code.length < 10) {
+    message.textContent = "Invalid confirmation link.";
+    statusBox.textContent = "The link you followed is missing or expired.";
+    statusBox.classList.add("error");
+    return;
+  }
+
+  const scriptUrl =
+    "https://script.google.com/macros/s/AKfycbwTZO8G9_h2HiB-vw16-BrZLPtT-78m-_AX-te3QnlldN-gNptHR0tjAMz7IL9UwbkAXg/exec?code=" +
+    encodeURIComponent(code);
+
+  let result = null;
+
+  try {
+    const response = await fetch(scriptUrl);
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    result = await response.json();
+  } catch (err) {
+    console.error("Confirmation error:", err);
+    message.textContent = "Unable to confirm your subscription.";
+    statusBox.textContent =
+      "There was a problem contacting the subscription service. Please try again later.";
+    statusBox.classList.add("error");
+    return;
+  }
+
+  if (result.status === "already_confirmed") {
+    message.textContent = "Already Confirmed";
+    statusBox.textContent =
+      "Your subscription was already confirmed. You're all set!";
+    statusBox.classList.add("success");
+    return;
+  }
+
+  if (result.status === "invalid_code") {
+    message.textContent = "Invalid confirmation link.";
+    statusBox.textContent =
+      "The confirmation code appears to be invalid or expired.";
+    statusBox.classList.add("error");
+    return;
+  }
+
+  message.textContent = "Subscription Confirmed!";
+  statusBox.textContent =
+    "Thanks for joining Kemptville Creative Writers. You'll now receive KCW updates and newsletters.";
+  statusBox.classList.add("success");
+});

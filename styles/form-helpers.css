@@ -1,0 +1,5 @@
+.form-helper, .form-checksum { display:none !important; }
+.form-message { display:none; margin-top:1rem; padding:.8rem 1rem; border-radius:4px; font-size:.92rem; }
+.form-message.success { display:block; background:#e6f0e4; color:#245536; border:1px solid #a9c3a5; }
+.form-message.error { display:block; background:#f7e7e5; color:#7b2c27; border:1px solid #d8aaa5; }
+button[disabled] { opacity:.65; cursor:wait; }
