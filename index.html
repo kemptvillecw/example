@@ -1,134 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kemptville Creative Writers — a welcoming community for writers of all genres and experience levels.">
-  <title>Kemptville Creative Writers | Where stories find their voice</title>
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="styles/form-helpers.css">
-</head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="site-brand" aria-label="Kemptville Creative Writers home">
-      <span class="brand-mark" aria-hidden="true">✦</span>
-      <span class="brand-text">
-        <span class="site-name">Kemptville</span>
-        <span class="site-name">Creative Writers</span>
-        <span class="tagline">Where stories find their voice</span>
-      </span>
-    </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
-    <nav id="site-navigation" class="site-nav" aria-label="Main navigation">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="schedule.html">Schedule &amp; Events</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Home | Kemptville Creative Writers</title><link rel="stylesheet" href="styles/styles.css"><link rel="stylesheet" href="styles/form-helpers.css"></head><body><header class="site-header"><div class="header-inner"><a class="site-brand" href="index.html"><img src="images/logo.svg" alt="Kemptville Creative Writers — Where stories find their voice"></a><button class="nav-toggle" type="button" aria-expanded="false">Menu</button><nav class="site-nav" aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a><a href="about.html" >About Us</a><a href="schedule.html" >Schedule &amp; Events</a><a href="contact.html" >Contact</a></nav></div></header>
 <main>
-  <section class="hero">
-    <div class="hero-copy">
-      <p class="eyebrow">A community of writers in Kemptville</p>
-      <h1>Where stories find their voice.</h1>
-      <p class="hero-lead">A welcoming place to write, learn, share ideas, and grow alongside other writers.</p>
-      <div class="hero-actions">
-        <a class="button button-primary" href="schedule.html">See the schedule</a>
-        <a class="button button-secondary" href="about.html">Learn about KCW</a>
-      </div>
-    </div>
-    <div class="hero-art" role="img" aria-label="A warm writing desk with notebooks, books, and a cup of tea"></div>
-  </section>
+<section class="hero hero-home"><div class="hero-copy">
+  <p class="eyebrow">Writers in the Kemptville area</p>
 
-  <section class="intro section-shell">
-    <div class="section-heading">
-      <p class="eyebrow">A place to write</p>
-      <h2>Meet. Write. Share. Encourage.</h2>
-      <p>KCW is a diverse, member-led community for hobbyists, aspiring novelists, memoirists, and published authors.</p>
-    </div>
-    <div class="feature-grid">
-      <article class="feature-card">
-        <span class="feature-icon" aria-hidden="true">✎</span>
-        <h3>Develop your craft</h3>
-        <p>Explore writing techniques through prompts, discussions, workshops, and guest presentations.</p>
-      </article>
-      <article class="feature-card">
-        <span class="feature-icon" aria-hidden="true">✦</span>
-        <h3>Find your people</h3>
-        <p>Connect with writers at every stage and across genres in a friendly, encouraging environment.</p>
-      </article>
-      <article class="feature-card">
-        <span class="feature-icon" aria-hidden="true">❧</span>
-        <h3>Keep writing</h3>
-        <p>Make space for your work, share when you are ready, and keep moving your stories forward.</p>
-      </article>
-    </div>
-  </section>
+  <h1>Stay connected to the writing community.</h1>
 
-  <section class="meeting-banner">
-    <div class="section-shell meeting-grid">
-      <div>
-        <p class="eyebrow">Monday nights</p>
-        <h2>Our regular meeting</h2>
-        <p>Join us at the North Grenville Public Library, in the Tallman Room, from 6:00 to 7:50 p.m.</p>
-      </div>
-      <div class="meeting-details">
-        <div><strong>When</strong><span>Monday evenings<br>January–May &amp; September–December</span></div>
-        <div><strong>Where</strong><span>North Grenville Public Library<br>Tallman Room</span></div>
-        <div><strong>Cost</strong><span>Membership is free</span></div>
-      </div>
-    </div>
-  </section>
+  <p>
+    Get the latest KCW meeting dates, writing events, and opportunities
+    to learn and share with other local writers.
+  </p>
 
-  <section class="newsletter section-shell" id="newsletter">
-    <div class="newsletter-copy">
-      <p class="eyebrow">Stay in the story</p>
-      <h2>Join the KCW newsletter</h2>
-      <p>Get news about meetings, events, writing opportunities, and optional weekly library status updates.</p>
-    </div>
-    <div class="newsletter-card">
-      <form id="newsletter-form" action="https://script.google.com/macros/s/AKfycbwTZO8G9_h2HiB-vw16-BrZLPtT-78m-_AX-te3QnlldN-gNptHR0tjAMz7IL9UwbkAXg/exec" method="POST">
-        <div class="form-helper">
-          <label for="middle_name">Middle Name</label>
-          <input type="text" id="middle_name" name="middle_name" autocomplete="one-time-code" tabindex="-1">
-        </div>
-        <input type="text" name="checksum" value="abc123" class="form-checksum" tabindex="-1" aria-hidden="true">
-        <input type="hidden" name="interacted" value="no">
-        <input type="hidden" name="form_started" id="form_started">
-        <label for="name">Name <span>(optional)</span></label>
-        <input type="text" id="name" name="name" autocomplete="name">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" autocomplete="email" required>
-        <label class="checkbox-label">
-          <input type="checkbox" name="weekly_calendar" value="yes">
-          <span>Send me weekly updates about library closures and schedule changes.</span>
-        </label>
-        <button class="button button-primary" type="submit">Join Newsletter</button>
-      </form>
-      <div id="newsletter-message" class="form-message" role="status" aria-live="polite"></div>
-    </div>
-  </section>
-</main>
+  <a class="button button-primary" href="#newsletter">
+    Find your place →
+  </a>
+</div></section>
+<section class="newsletter-reasons"><div class="reasons-inner"><h2>Why join the KCW newsletter?</h2><div class="reason-grid">
+<div class="reason"><span class="reason-icon">▦</span><div><h3>Know what's coming up</h3><p>Meeting dates, guest speakers, workshops, and special events.</p></div></div>
+<div class="reason"><span class="reason-icon">▤</span><div><h3>Discover opportunities</h3><p>Writing activities, resources, and support for local writers.</p></div></div>
+<div class="reason"><span class="reason-icon">⌂</span><div><h3>Never miss a meeting</h3><p>Receive schedule changes and optional library closure updates.</p></div></div>
+<div class="reason"><span class="reason-icon">✦</span><div><h3>Stay connected</h3><p>Keep in touch with a welcoming community of writers.</p></div></div>
+</div></div></section>
+<section class="newsletter-strip" id="newsletter"><div class="newsletter-inner"><div class="newsletter-copy"><span class="leaf-mark">❧</span><div><h2>Stay in the Loop</h2><p>Get updates on meetings, events, and writing opportunities.</p></div></div>
+<form id="newsletter-form" class="newsletter-form" action="https://script.google.com/macros/s/AKfycbwTZO8G9_h2HiB-vw16-BrZLPtT-78m-_AX-te3QnlldN-gNptHR0tjAMz7IL9UwbkAXg/exec" method="POST">
+<div class="form-helper"><label for="middle_name">Middle Name</label><input id="middle_name" name="middle_name" type="text" autocomplete="one-time-code" tabindex="-1"></div><input class="form-checksum" type="text" name="checksum" value="abc123" tabindex="-1"><input type="hidden" name="interacted" value="no"><input type="hidden" name="form_started" id="form_started">
+<div><label for="name">Name (optional)</label><input id="name" name="name" type="text"></div><div><label for="email">Email</label><input id="email" name="email" type="email" required></div><button class="button button-primary" type="submit">Join Newsletter</button><label class="newsletter-option"><input type="checkbox" name="weekly_calendar" value="yes"> Send me weekly updates about KCW meetings, events, library hours, and local weather</label>
+</form><div id="newsletter-message" class="form-message" role="status"></div></div></section>
+<section class="section home-panels"><div class="grid-3">
+<article class="panel home-panel"><h2>About KCW</h2>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>
-      <strong>Kemptville Creative Writers</strong>
-      <span>Where stories find their voice</span>
-    </div>
-    <nav aria-label="Footer navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="schedule.html">Schedule &amp; Events</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <p>© 2026 Kemptville Creative Writers</p>
-  </div>
-</footer>
-<script src="scripts/form-helpers.js"></script>
-<script src="scripts/site.js"></script>
-</body>
-</html>
+<p>
+  Kemptville Creative Writers (KCW) began as the North Grenville Writers Circle,
+  founded in 2018 by Pamela Welling.
+</p>
+
+<p>
+  Today, KCW brings together writers of all levels, from those just beginning to write
+  to experienced and published authors. Our members write across genres and forms,
+  including fiction, non-fiction, poetry and memoir.
+</p>
+
+<p>
+  We meet to write, share ideas, explore the craft of writing, and learn from authors
+  and subject-matter experts. It's a place to develop your writing, connect with other
+  writers, and encourage one another along the way.
+</p><a class="home-link" href="about.html">Learn more about us →</a></article>
+<article class="panel home-panel"><h2>Next Meeting</h2><p><strong>Monday evenings</strong><br>6:00 p.m. – 7:50 p.m.</p><div class="meta"><div><strong>Where</strong>North Grenville Public Library<br>Tallman Room</div><div><strong>When</strong>January–May and September–December</div><div><strong>Membership</strong>Free — new members welcome.</div></div><a class="home-link" href="schedule.html">View full schedule →</a></article>
+<article class="panel home-panel"><h2>What to Expect</h2><ul class="checks"><li>Writing exercises</li><li>Group discussions</li><li>Supportive community</li><li>Guest authors &amp; speakers</li></ul><p><em>All are welcome!</em></p></article>
+</div></section>
+</main><footer class="site-footer"><div class="footer-inner"><span>© 2026 Kemptville Creative Writers</span><nav><a href="index.html">Home</a><a href="about.html">About</a><a href="schedule.html">Schedule</a><a href="contact.html">Contact</a></nav><span>Where stories find their voice</span></div></footer><script src="scripts/site.js"></script></body></html>

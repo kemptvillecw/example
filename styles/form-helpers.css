@@ -1,5 +1,1 @@
-.form-helper, .form-checksum { display:none !important; }
-.form-message { display:none; margin-top:1rem; padding:.8rem 1rem; border-radius:4px; font-size:.92rem; }
-.form-message.success { display:block; background:#e6f0e4; color:#245536; border:1px solid #a9c3a5; }
-.form-message.error { display:block; background:#f7e7e5; color:#7b2c27; border:1px solid #d8aaa5; }
-button[disabled] { opacity:.65; cursor:wait; }
+.form-helper,.form-checksum{display:none}.form-message{font-size:.95rem;padding:.75rem 1rem;border-radius:6px;display:none}.form-message.success{display:block;background:#e6f7e6;color:#0a5a0a;border:1px solid #8fd98f}.form-message.error{display:block;background:#fdeaea;color:#8a1f1f;border:1px solid #e8a1a1}

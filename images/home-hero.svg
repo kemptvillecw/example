@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520">
+      <defs>
+        <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#b9cfbe"/><stop offset="1" stop-color="#e7d9bc"/></linearGradient>
+        <linearGradient id="water" x2="0" y2="1"><stop stop-color="#557d76"/><stop offset="1" stop-color="#1f5149"/></linearGradient>
+        <filter id="soft"><feGaussianBlur stdDeviation="12"/></filter>
+      </defs>
+      <rect width="1200" height="520" fill="url(#sky)"/>
+      <circle cx="920" cy="100" r="72" fill="#f4efdb" opacity=".8"/>
+      <g filter="url(#soft)" opacity=".85" fill="#496b4f">
+        <ellipse cx="120" cy="175" rx="210" ry="70"/><ellipse cx="430" cy="160" rx="250" ry="90"/>
+        <ellipse cx="1050" cy="180" rx="250" ry="80"/>
+      </g>
+      <path fill="#789b74" d="M0 205 Q120 160 230 205 T460 205 T690 200 T920 210 T1200 195 V285 H0Z"/>
+      <path fill="#4e7465" d="M0 238 Q150 205 280 245 T560 235 T830 240 T1200 225 V320 H0Z"/>
+      <path fill="url(#water)" d="M0 285 Q300 255 600 285 T1200 270 V520 H0Z"/>
+      <path fill="#b38e65" d="M0 392 Q300 360 590 395 T1200 375 V520 H0Z"/>
+      <g fill="#725a42" opacity=".9">
+        <rect x="520" y="330" width="420" height="24" rx="8" transform="rotate(-2 520 330)"/>
+        <rect x="610" y="358" width="350" height="22" rx="8" transform="rotate(-2 610 358)"/>
+      </g>
+      <g transform="translate(785 270)">
+        <path fill="#efe9d7" d="M0 30 Q85 0 170 30 L170 125 Q85 150 0 125Z"/>
+        <path fill="#c9c2aa" d="M18 45 Q85 25 152 45 L152 110 Q85 128 18 110Z"/>
+        <path fill="none" stroke="#668873" stroke-width="7" d="M42 62 H128 M42 82 H116 M42 102 H102"/>
+        <path fill="#f2e7c9" d="M170 45 H205 Q228 45 228 68 V96 Q228 118 205 118 H170Z"/>
+        <path fill="none" stroke="#6a8771" stroke-width="6" d="M185 63 H212 M185 78 H210 M185 93 H202"/>
+      </g>
+      <g fill="#204f43"><path d="M1080 255 Q1140 190 1190 180 Q1150 240 1105 305Z"/><path d="M1135 195 Q1160 155 1190 145 Q1175 185 1150 215Z"/></g>
+    </svg>
