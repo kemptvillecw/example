@@ -1,8 +1,114 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Contact | Kemptville Creative Writers</title><link rel="stylesheet" href="styles/styles.css"><link rel="stylesheet" href="styles/form-helpers.css"></head><body><header class="site-header"><div class="header-inner"><a class="site-brand" href="index.html"><img src="images/logo.svg" alt="Kemptville Creative Writers — Where stories find their voice"></a><button class="nav-toggle" type="button" aria-expanded="false">Menu</button><nav class="site-nav" aria-label="Main navigation"><a href="index.html" >Home</a><a href="about.html" >About Us</a><a href="schedule.html" >Schedule &amp; Events</a><a href="contact.html" aria-current="page">Contact</a></nav></div></header>
-<main><section class="hero hero-contact"><div class="hero-copy"><p class="eyebrow">We'd love to hear from you.</p><h1>Get in Touch</h1><p>Questions about KCW, meetings, or becoming a member? Send us a message.</p></div></section>
-<section class="page-content"><div class="contact-layout"><div class="contact-info">
-<div class="contact-item"><span class="contact-icon">✉</span><div><h3>Send a Message</h3><p>Use the form to get in touch with the group. We do not publish a public email address on this site.</p></div></div>
-<div class="contact-item"><span class="contact-icon">⌖</span><div><h3>Visit Us</h3><p>North Grenville Public Library<br>Tallman Room<br>Kemptville, ON</p></div></div>
-<div class="contact-item"><span class="contact-icon">✦</span><div><h3>New Members Welcome</h3><p>Membership is free. Writers of all genres and experience levels are encouraged to join us.</p></div></div></div>
-<form class="contact-form" onsubmit="event.preventDefault();document.getElementById('contact-status').textContent='Thanks! Your message form is ready to connect to your preferred backend.';document.getElementById('contact-status').className='form-message success';"><h2 style="margin-top:0">Send Us a Message</h2><label for="contact-name">Name (optional)</label><input id="contact-name" type="text"><label for="contact-email">Email</label><input id="contact-email" type="email"><label for="contact-message">Message</label><textarea id="contact-message"></textarea><button class="button button-primary" type="submit">Send Message</button><div id="contact-status" class="form-message"></div></form></div></section>
-<section class="section"><img src="images/home-hero.svg" alt="Kemptville lake and writing-inspired scene" style="width:100%;display:block"></section></main><footer class="site-footer"><div class="footer-inner"><span>© 2026 Kemptville Creative Writers</span><nav><a href="index.html">Home</a><a href="about.html">About</a><a href="schedule.html">Schedule</a><a href="contact.html">Contact</a></nav><span>Where stories find their voice</span></div></footer><script src="scripts/site.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | Kemptville Creative Writers</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/form-helpers.css">
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="site-brand" href="index.html">
+          <img src="images/logo.svg" alt="Kemptville Creative Writers — Where stories find their voice">
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false">Menu</button>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="schedule.html">Schedule &amp; Events</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero hero-contact">
+        <div class="hero-copy">
+          <p class="eyebrow">Connect with KCW</p>
+          <h1>We'd love to hear from you.</h1>
+          <p>
+            Have a question about KCW, our meetings, or getting involved?
+            Get in touch and we'll be happy to help.
+          </p>
+        </div>
+      </section>
+
+      <section class="page-content">
+        <div class="contact-layout">
+
+          <div class="contact-info">
+            <div class="panel contact-item">
+              <span class="contact-icon" aria-hidden="true">⌂</span>
+              <div>
+                <h3>Where we meet</h3>
+                <p>
+                  North Grenville Public Library<br>
+                  105 Prescott Street, Kemptville<br>
+                  Tallman Room
+                </p>
+              </div>
+            </div>
+
+            <div class="panel contact-item">
+              <span class="contact-icon" aria-hidden="true">◷</span>
+              <div>
+                <h3>When we meet</h3>
+                <p>Mondays, 6:00 p.m. to 7:50 p.m.</p>
+                <p>Meetings run January to May and September to December.</p>
+              </div>
+            </div>
+
+            <div class="panel contact-item">
+              <span class="contact-icon" aria-hidden="true">✎</span>
+              <div>
+                <h3>New members are welcome</h3>
+                <p>Membership is free, and writers of all levels and genres are welcome.</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" action="#" method="post">
+            <h2 class="section-title">Send us a message</h2>
+            <p>If you'd like to learn more about KCW, use the form below.</p>
+
+            <label for="contact-name">Name</label>
+            <input id="contact-name" name="name" type="text" autocomplete="name">
+
+            <label for="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" required>
+
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" required></textarea>
+
+            <p style="margin-top:14px">
+              <button class="button button-primary" type="submit">Send message</button>
+            </p>
+
+            <p class="form-message" role="status" aria-live="polite"></p>
+          </form>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>© 2026 Kemptville Creative Writers</span>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="schedule.html">Schedule</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <span>Where stories find their voice</span>
+      </div>
+    </footer>
+
+    <script src="scripts/site.js"></script>
+  </body>
+</html>
