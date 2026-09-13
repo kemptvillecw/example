@@ -30,6 +30,9 @@ body {
   color: var(--ink);
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 a {
@@ -602,9 +605,14 @@ a {
   min-height: 120px;
 }
 
+main {
+  flex: 1;
+}
+
 .site-footer {
   background: var(--forest-dark);
   color: #fff;
+  margin-top: auto;
 }
 
 .footer-inner {
