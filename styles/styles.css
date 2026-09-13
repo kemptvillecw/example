@@ -140,21 +140,21 @@ a {
 .hero-confirmed {
   background-image:
     linear-gradient(90deg, rgba(24, 22, 17, 0.78), rgba(24, 22, 17, 0.2)),
-    url("../../images/confirmed-hero-optimized.png");
+    url("../images/confirmed-hero-optimized.png");
   background-position: center center;
 }
 
 .hero-preferences {
   background-image:
     linear-gradient(90deg, rgba(24, 22, 17, 0.78), rgba(24, 22, 17, 0.2)),
-    url("../../images/preferences-hero-optimized.png");
+    url("../images/preferences-hero-optimized.png");
   background-position: center center;
 }
 
 .hero-unsubscribed {
   background-image:
     linear-gradient(90deg, rgba(24, 22, 17, 0.78), rgba(24, 22, 17, 0.2)),
-    url("../../images/unsubscribed-hero-optimized.png");
+    url("../images/unsubscribed-hero-optimized.png");
   background-position: center center;
 }
 
@@ -739,21 +739,21 @@ a {
     background-position: 68% center;
     background-image:
       linear-gradient(180deg, rgba(24, 22, 17, 0.08), rgba(24, 22, 17, 0.75)),
-      url("../../images/confirmed-hero-optimized.png");
+      url("../images/confirmed-hero-optimized.png");
   }
 
   .hero-preferences {
     background-position: 68% center;
     background-image:
       linear-gradient(180deg, rgba(24, 22, 17, 0.08), rgba(24, 22, 17, 0.75)),
-      url("../../images/preferences-hero-optimized.png");
+      url("../images/preferences-hero-optimized.png");
   }
 
   .hero-unsubscribed {
     background-position: 68% center;
     background-image:
       linear-gradient(180deg, rgba(24, 22, 17, 0.08), rgba(24, 22, 17, 0.75)),
-      url("../../images/unsubscribed-hero-optimized.png");
+      url("../images/unsubscribed-hero-optimized.png");
   }
 
   .section,
