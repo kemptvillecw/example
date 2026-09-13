@@ -165,10 +165,9 @@ a {
 .hero-confirmed,
 .hero-unsubscribed {
   min-height: clamp(220px, 34vw, 300px);
-  background-size: auto, contain;
-  background-repeat: no-repeat, no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center center;
-  background-color: #1b1915;
 }
 
 .hero-about .hero-copy,
@@ -245,7 +244,7 @@ a {
   gap: 12px;
 }
 
-.grid-2 {
+grid-2 {
   display: grid;
   grid-template-columns: 1.4fr 0.9fr;
   gap: 18px;
