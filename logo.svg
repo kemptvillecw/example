@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 100" role="img" aria-labelledby="title desc">
+  <title id="title">Kemptville Creative Writers</title>
+  <desc id="desc">Kemptville Creative Writers, Where stories find their voice</desc>
+
+  <rect width="340" height="100" fill="none"/>
+
+  <g fill="none" stroke="#064f3d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 73 Q55 51 92 73 L55 81 Z"/>
+    <path d="M18 73 Q18 48 55 41 Q92 48 92 73"/>
+    <path d="M55 41 V18"/>
+    <path d="M55 30 Q42 23 35 12"/>
+    <path d="M55 34 Q70 23 78 10"/>
+    <path d="M42 24 Q35 18 31 8"/>
+    <path d="M68 25 Q75 17 83 7"/>
+    <path d="M55 41 Q47 33 44 24"/>
+    <path d="M55 41 Q64 32 68 22"/>
+    <path d="M27 61 Q55 48 83 61"/>
+    <path d="M27 68 Q55 55 83 68"/>
+  </g>
+
+  <text x="110" y="40"
+        fill="#064f3d"
+        font-family="Georgia, serif"
+        font-size="25"
+        font-weight="700"
+        letter-spacing="1.5">Kemptville</text>
+
+  <text x="110" y="66"
+        fill="#064f3d"
+        font-family="Georgia, serif"
+        font-size="23"
+        font-weight="700"
+        letter-spacing="1">Creative Writers</text>
+
+  <text x="110" y="85"
+        fill="#064f3d"
+        font-family="Georgia, serif"
+        font-size="12"
+        font-style="italic">Where stories find their voice</text>
+</svg>
