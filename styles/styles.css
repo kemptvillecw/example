@@ -220,6 +220,16 @@ a {
   background: var(--forest-dark);
 }
 
+/* NEW — Disabled button */
+.button[disabled],
+.button-primary[disabled] {
+  background: var(--line);
+  color: var(--muted);
+  border-color: var(--line);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
 .section {
   max-width: var(--max);
   margin: auto;
@@ -413,6 +423,17 @@ grid-2 {
   font: 14px Georgia, serif;
 }
 
+/* NEW — Disabled inputs + textarea */
+.contact-form input[disabled],
+.contact-form textarea[disabled],
+.contact-form button[disabled] {
+  background: var(--mint);
+  color: var(--muted);
+  border-color: var(--line);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
 .newsletter-option {
   grid-column: 1 / -1;
   font: 12px Arial, sans-serif;
@@ -590,15 +611,6 @@ grid-2 {
   display: block;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid var(--line);
-  background: #fff;
-  font: 14px Georgia, serif;
-}
-
 .contact-form textarea {
   resize: vertical;
   min-height: 120px;
@@ -685,169 +697,4 @@ main {
   }
 
   .newsletter-form {
-    grid-template-columns: 1fr 1fr auto;
-  }
-
-  .contact-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .schedule-layout {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 700px) {
-  .nav-toggle {
-    display: block;
-  }
-
-  .site-nav {
-    display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-    background: #fffdf8;
-    border-bottom: 1px solid var(--line);
-    padding: 8px 18px;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-  }
-
-  .site-nav.open {
-    display: flex;
-  }
-
-  .site-nav a {
-    padding: 12px 0;
-  }
-
-  .site-brand img {
-    width: 235px;
-  }
-
-  .hero-home {
-    min-height: 420px;
-    background-position: 65% center;
-    background-image:
-      linear-gradient(180deg, rgba(4, 43, 34, 0.08), rgba(4, 43, 34, 0.75)),
-      url("../images/autumn-writing-banner-optimized.png");
-  }
-
-  .hero-copy {
-    padding: 38px 18px;
-  }
-
-  .hero-about {
-    background-position: 68% center;
-    background-image:
-      linear-gradient(180deg, rgba(24, 22, 17, 0.08), rgba(24, 22, 17, 0.75)),
-      url("../images/about-hero-optimized.png");
-  }
-
-  .hero-schedule {
-    background-position: 68% center;
-    background-image:
-      linear-gradient(180deg, rgba(24, 22, 17, 0.08), rgba(24, 22, 17, 0.75)),
-      url("../images/schedule-hero-optimized.png");
-  }
-
-  .hero-contact {
-    background-position: 68% center;
-    background-image:
-      linear-gradient(180deg, rgba(24, 22, 17, 0.08), rgba(24, 22, 17, 0.75)),
-      url("../images/contact-hero-optimized.png");
-  }
-
-  .hero-confirmed {
-    background-position: 68% center;
-    background-image:
-      linear-gradient(180deg, rgba(24, 22, 17, 0.08), rgba(24, 22, 17, 0.75)),
-      url("../images/confirmed-hero-optimized.png");
-  }
-
-  .hero-preferences {
-    background-position: 68% center;
-    background-image:
-      linear-gradient(180deg, rgba(24, 22, 17, 0.08), rgba(24, 22, 17, 0.75)),
-      url("../images/preferences-hero-optimized.png");
-  }
-
-  .hero-unsubscribed {
-    background-position: 68% center;
-    background-image:
-      linear-gradient(180deg, rgba(24, 22, 17, 0.08), rgba(24, 22, 17, 0.75)),
-      url("../images/unsubscribed-hero-optimized.png");
-  }
-
-  .section,
-  .page-content,
-  .simple-page {
-    padding-left: 14px;
-    padding-right: 14px;
-  }
-
-  .newsletter-form {
-    grid-template-columns: 1fr;
-  }
-
-  .newsletter-option {
-    grid-column: auto;
-  }
-
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-inner nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .reason-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .reason,
-  .reason:first-child,
-  .reason:nth-child(3) {
-    border-left: 0;
-    border-top: 1px solid var(--line);
-    padding: 10px 0;
-  }
-
-  .reason:first-child {
-    border-top: 0;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-home {
-    min-height: 400px;
-    background-position: 68% center;
-  }
-
-  .hero-about {
-    background-position: 72% center;
-  }
-
-  .events {
-    font-size: 0.72rem;
-  }
-
-  .events th,
-  .events td {
-    padding: 7px;
-  }
-}
+    grid-template-columns: 1fr 1fr auto
