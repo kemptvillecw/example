@@ -254,7 +254,7 @@ a {
   gap: 12px;
 }
 
-grid-2 {
+.grid-2 {
   display: grid;
   grid-template-columns: 1.4fr 0.9fr;
   gap: 18px;
@@ -679,6 +679,11 @@ main {
   margin: auto;
 }
 
+/* =========================================================
+   Responsive layout
+   ========================================================= */
+
+/* Tablet / smaller desktop */
 @media (max-width: 900px) {
   .site-nav {
     gap: 16px;
@@ -697,4 +702,321 @@ main {
   }
 
   .newsletter-form {
-    grid-template-columns: 1fr 1fr auto
+    grid-template-columns: 1fr 1fr auto;
+  }
+
+  .reason-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reason:nth-child(3) {
+    border-left: 0;
+  }
+
+  .about-layout,
+  .schedule-layout,
+  .contact-layout,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .hero-copy {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}
+
+/* Phones */
+@media (max-width: 700px) {
+  .header-inner {
+    min-height: 70px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .site-brand img {
+    width: min(235px, 72vw);
+  }
+
+  .nav-toggle {
+    display: block;
+    padding: 8px 2px;
+    cursor: pointer;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 8px 18px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    box-shadow: 0 8px 18px rgba(18, 43, 35, 0.08);
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .site-nav a:last-child {
+    border-bottom: 0;
+  }
+
+  .hero-home {
+    min-height: 420px;
+    background-position: 65% center;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(4, 43, 34, 0.08),
+        rgba(4, 43, 34, 0.75)
+      ),
+      url("../images/autumn-writing-banner-optimized.png");
+  }
+
+  .hero-about {
+    background-position: 68% center;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(24, 22, 17, 0.08),
+        rgba(24, 22, 17, 0.75)
+      ),
+      url("../images/about-hero-optimized.png");
+  }
+
+  .hero-schedule {
+    background-position: 68% center;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(24, 22, 17, 0.08),
+        rgba(24, 22, 17, 0.75)
+      ),
+      url("../images/schedule-hero-optimized.png");
+  }
+
+  .hero-contact {
+    background-position: 68% center;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(24, 22, 17, 0.08),
+        rgba(24, 22, 17, 0.75)
+      ),
+      url("../images/contact-hero-optimized.png");
+  }
+
+  .hero-confirmed {
+    background-position: 68% center;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(24, 22, 17, 0.08),
+        rgba(24, 22, 17, 0.75)
+      ),
+      url("../images/confirmed-hero-optimized.png");
+  }
+
+  .hero-preferences {
+    background-position: 68% center;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(24, 22, 17, 0.08),
+        rgba(24, 22, 17, 0.75)
+      ),
+      url("../images/preferences-hero-optimized.png");
+  }
+
+  .hero-unsubscribed {
+    background-position: 68% center;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(24, 22, 17, 0.08),
+        rgba(24, 22, 17, 0.75)
+      ),
+      url("../images/unsubscribed-hero-optimized.png");
+  }
+
+  .hero-copy {
+    padding: 38px 18px;
+  }
+
+  .hero-about .hero-copy,
+  .hero-confirmed .hero-copy,
+  .hero-unsubscribed .hero-copy {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .section,
+  .page-content {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .welcome-section {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+
+  .newsletter-inner {
+    padding: 14px;
+  }
+
+  .newsletter-form {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-option {
+    grid-column: auto;
+    align-items: flex-start;
+  }
+
+  #newsletter-message {
+    grid-column: 1;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .reason-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reason,
+  .reason:first-child,
+  .reason:nth-child(3) {
+    border-left: 0;
+  }
+
+  .reason:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .reason:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+    padding-top: 10px;
+  }
+
+  .reason:nth-child(3) {
+    padding-left: 0;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .footer-inner nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .events {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .timeline-row {
+    grid-template-columns: 42px 1fr;
+  }
+
+  .step {
+    width: 42px;
+    height: 42px;
+  }
+
+  .contact-form {
+    padding: 16px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .site-brand img {
+    width: min(205px, 68vw);
+  }
+
+  .reason-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reason,
+  .reason:first-child,
+  .reason:nth-child(3),
+  .reason:nth-child(n + 3) {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding: 10px 0;
+  }
+
+  .reason:first-child {
+    border-top: 0;
+  }
+
+  .reason:nth-child(2) {
+    border-top: 1px solid var(--line);
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-home {
+    min-height: 400px;
+    background-position: 68% center;
+  }
+
+  .hero-about,
+  .hero-schedule,
+  .hero-contact,
+  .hero-confirmed,
+  .hero-preferences,
+  .hero-unsubscribed {
+    background-position: 72% center;
+  }
+
+  .hero-copy {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .events {
+    font-size: 0.72rem;
+  }
+
+  .events th,
+  .events td {
+    padding: 7px;
+  }
+
+  .simple-page {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
