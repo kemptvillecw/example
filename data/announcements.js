@@ -1,0 +1,1 @@
+window.KCW_ANNOUNCEMENTS = [];

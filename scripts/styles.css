@@ -1623,11 +1623,11 @@ main {
 }
 
 
-/* ==========================================================
-   KCW HOMEPAGE — APPROVED PROPORTION PASS
-   Full-bleed hero/backgrounds, 1080px body grid,
-   1000px featured event, restrained spacing.
-========================================================== */
+/* KCW HOMEPAGE GEOMETRY FIX — 2026-09-15
+   ----------------------------------------------------------
+   One consistent 1180px content grid, tighter vertical rhythm,
+   restrained section colour changes, and fewer nested cards.
+---------------------------------------------------------- */
 
 .home-band {
   width: 100%;
@@ -1635,121 +1635,107 @@ main {
 }
 
 .home-inner {
-  width: min(calc(100% - 48px), 1080px);
+  width: min(calc(100% - 36px), var(--max));
   margin-inline: auto;
 }
 
-.home-inner--event {
-  width: min(calc(100% - 48px), 1000px);
-}
-
-.home-band--white { background: #fff; }
+.home-band--white { background: var(--paper); }
 .home-band--cream { background: var(--cream); }
 .home-band--sage  { background: #edf3eb; }
 
-/* Hero image remains full bleed; copy aligns to the 1080px grid. */
+/* Align hero copy with the same content grid used below. */
 .hero-home {
-  padding-inline: max(24px, calc((100% - 1080px) / 2));
+  padding-inline: max(18px, calc((100% - var(--max)) / 2));
 }
 
 .hero-home .hero-copy {
-  width: min(650px, 100%);
-  padding: 44px 0 42px;
+  width: min(700px, 100%);
+  padding: 48px 0 46px;
 }
 
-/* Featured event */
+/* Featured event: close to hero, wide, and content-first. */
 .featured-section {
-  padding: 30px 0 34px;
+  padding: 42px 0 44px;
 }
 
 .featured-section .featured-event {
   width: 100%;
   margin: 0;
-  grid-template-columns: 120px minmax(0, 1fr);
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-}
-
-.featured-section .featured-event-date {
-  border-right: 1px solid var(--line);
-  background: transparent;
-  min-height: 190px;
+  grid-template-columns: 132px minmax(0, 1fr);
+  box-shadow: 0 5px 18px rgba(18, 43, 35, 0.055);
 }
 
 .featured-section .featured-event-content {
-  padding: 0 0 0 32px;
+  padding: 26px 30px;
 }
 
 .featured-section .featured-event-content h2 {
-  font-size: clamp(1.85rem, 2.6vw, 2.35rem);
-  margin-bottom: 8px;
+  font-size: clamp(1.9rem, 2.7vw, 2.55rem);
 }
 
-.featured-section .featured-event-content > p {
-  max-width: 700px;
+.featured-section .featured-event-date strong {
+  font-size: 3.25rem;
 }
 
-.featured-section .featured-event-meta {
-  margin-top: 16px;
-  padding-top: 14px;
-}
-
-.featured-section .featured-event-actions {
-  margin-top: 16px;
-}
-
-/* Learning section */
+/* Learning: compact, open, no large card-like whitespace. */
 .learning-section {
-  padding: 38px 0 42px;
+  padding: 46px 0 48px;
 }
 
 .learning-section .section-heading-centered {
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 
 .learning-section .section-heading-centered h2 {
-  font-size: clamp(1.8rem, 2.7vw, 2.25rem);
+  font-size: clamp(1.8rem, 2.7vw, 2.35rem);
 }
 
 .learning-section .learning-grid {
-  gap: 30px;
+  gap: 0;
 }
 
 .learning-section .learning-card {
-  padding: 0;
-  background: transparent;
-  box-shadow: none;
-  border: 0;
+  padding: 4px 24px 6px;
+}
+
+.learning-section .learning-card + .learning-card {
+  border-left: 1px solid var(--line);
 }
 
 .learning-section .feature-icon {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
+  font-size: 1.15rem;
 }
 
 .learning-section .learning-card h3 {
-  margin: 10px 0 6px;
+  margin-top: 10px;
 }
 
 .learning-section .learning-card p {
-  max-width: 235px;
-  margin: 0 auto;
+  max-width: 250px;
+  margin-inline: auto;
 }
 
-/* Learning outcomes: section tint, no inset panel. */
+/* Outcomes: the section itself is tinted; remove the inset panel effect. */
 .outcomes-section {
-  padding: 30px 0 34px;
+  padding: 38px 0 40px;
+}
+
+.outcomes-section .outcomes-panel {
+  background: transparent;
+  border: 0;
+  padding: 0;
 }
 
 .outcomes-section .outcomes-heading {
   display: block;
-  margin: 0 0 18px;
+  margin-bottom: 22px;
 }
 
 .outcomes-section .outcomes-heading h2 {
-  margin: 3px 0 0;
-  font-size: clamp(1.55rem, 2.2vw, 1.9rem);
+  margin: 4px 0 0;
+  font-size: clamp(1.55rem, 2.2vw, 1.95rem);
 }
 
 .outcomes-section .outcomes-grid {
@@ -1760,100 +1746,121 @@ main {
   padding: 0 28px;
 }
 
-.outcomes-section .outcomes-grid > div:first-child { padding-left: 0; }
-.outcomes-section .outcomes-grid > div:last-child { padding-right: 0; }
-
-/* Upcoming section is hidden by events.js when there are no additional real events. */
-.upcoming-section {
-  padding: 34px 0 38px;
+.outcomes-section .outcomes-grid > div:first-child {
+  padding-left: 0;
 }
 
-/* First-time visitor section: flat, white, two-column. */
+.outcomes-section .outcomes-grid > div:last-child {
+  padding-right: 0;
+}
+
+/* Upcoming events only appears when real additional events exist. */
+.upcoming-section {
+  padding: 42px 0 46px;
+}
+
+/* First-time visitor: no dark band and no decorative fake card. */
 .visitor-section {
-  padding: 34px 0 38px;
-  border-top: 1px solid var(--line);
+  padding: 42px 0 46px;
 }
 
 .visitor-simple {
   display: grid;
-  grid-template-columns: minmax(300px, .9fr) minmax(0, 1.4fr);
-  gap: 52px;
-  align-items: center;
+  grid-template-columns: minmax(240px, .8fr) minmax(0, 1.5fr);
+  gap: 24px 52px;
+  align-items: start;
 }
 
 .visitor-intro h2 {
-  margin: 4px 0 8px;
+  margin: 4px 0 10px;
   color: var(--forest-dark);
-  font-size: clamp(1.65rem, 2.4vw, 2rem);
+  font-size: clamp(1.7rem, 2.5vw, 2.1rem);
 }
 
-.visitor-intro p {
-  margin-bottom: 16px;
+.visitor-intro > p:last-child {
+  margin: 0;
+  color: var(--muted);
 }
 
-.visitor-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 26px;
+.visitor-simple .visitor-list {
+  margin: 2px 0 0;
 }
 
-/* Newsletter remains the strong dark closing band. */
+.visitor-simple > .button {
+  grid-column: 2;
+  justify-self: start;
+  margin-top: -6px;
+}
+
+/* Keep the newsletter as the strong dark closing band. */
 .newsletter-strip {
   margin-top: 0;
 }
 
 /* Tablet */
 @media (max-width: 900px) {
-  .home-inner,
-  .home-inner--event {
-    width: min(calc(100% - 40px), 1080px);
+  .featured-section,
+  .learning-section,
+  .upcoming-section,
+  .visitor-section {
+    padding-block: 38px;
+  }
+
+  .outcomes-section {
+    padding-block: 34px;
   }
 
   .learning-section .learning-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 28px 0;
+  }
+
+  .learning-section .learning-card:nth-child(3) {
+    border-left: 0;
   }
 
   .visitor-simple {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 22px;
+  }
+
+  .visitor-simple > .button {
+    grid-column: 1;
+    margin-top: 0;
   }
 }
 
 /* Mobile */
 @media (max-width: 700px) {
-  .home-inner,
-  .home-inner--event {
-    width: min(calc(100% - 30px), 1080px);
+  .home-inner {
+    width: min(calc(100% - 30px), var(--max));
   }
 
   .hero-home {
     padding-inline: 15px;
   }
 
+  .hero-home .hero-copy {
+    padding: 38px 0;
+  }
+
   .featured-section,
   .learning-section,
+  .upcoming-section,
   .visitor-section {
-    padding-block: 28px;
+    padding-block: 32px;
   }
 
   .outcomes-section {
-    padding-block: 26px;
+    padding-block: 30px;
   }
 
   .featured-section .featured-event {
     grid-template-columns: 1fr;
   }
 
-  .featured-section .featured-event-date {
-    min-height: 0;
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
-    padding: 0 0 14px;
-    margin-bottom: 18px;
-  }
-
   .featured-section .featured-event-content {
-    padding-left: 0;
+    padding: 22px 20px;
   }
 
   .learning-section .learning-grid {
@@ -1862,10 +1869,12 @@ main {
   }
 
   .learning-section .learning-card {
-    padding: 18px 0;
+    padding: 20px 0;
   }
 
-  .learning-section .learning-card + .learning-card {
+  .learning-section .learning-card + .learning-card,
+  .learning-section .learning-card:nth-child(3) {
+    border-left: 0;
     border-top: 1px solid var(--line);
   }
 
@@ -1876,17 +1885,17 @@ main {
   .outcomes-section .outcomes-grid > div,
   .outcomes-section .outcomes-grid > div:first-child,
   .outcomes-section .outcomes-grid > div:last-child {
-    padding: 14px 0;
+    padding: 16px 0 0;
     border-left: 0;
     border-top: 1px solid var(--line);
   }
 
   .outcomes-section .outcomes-grid > div:first-child {
-    border-top: 0;
     padding-top: 0;
+    border-top: 0;
   }
 
-  .visitor-list {
+  .visitor-simple .visitor-list {
     grid-template-columns: 1fr;
     gap: 0;
   }

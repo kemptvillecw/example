@@ -3,217 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home | Kemptville Creative Writers</title>
-
+  <meta name="description" content="Kemptville Creative Writers is a welcoming, member-led community where writers learn, practice, share, and grow together.">
+  <meta property="og:title" content="Kemptville Creative Writers | Write, Learn, and Grow Together">
+  <meta property="og:description" content="Discover KCW meetings, guest speakers, workshops, and opportunities to learn and write with other local writers.">
+  <meta property="og:type" content="website">
+  <title>Kemptville Creative Writers | Write, Learn, and Grow Together</title>
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/form-helpers.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Kemptville Creative Writers",
+    "description": "A member-led community where writers learn, practice, share, and grow together."
+  }
+  </script>
 </head>
-
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <a class="site-brand" href="index.html">
+      <a class="site-brand" href="index.html" aria-label="Kemptville Creative Writers home">
         <img src="images/logo.svg" alt="Kemptville Creative Writers — Where stories find their voice">
       </a>
-
-      <button class="nav-toggle" type="button" aria-expanded="false">Menu</button>
-
-      <nav class="site-nav" aria-label="Main navigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
+      <nav id="site-navigation" class="site-nav" aria-label="Main navigation">
         <a href="index.html" aria-current="page">Home</a>
         <a href="about.html">About Us</a>
         <a href="schedule.html">Schedule &amp; Events</a>
+        <a href="archive.html">Archive</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
+    <div class="announcement-stack" data-announcements="homepage" aria-live="polite"></div>
+
     <section class="hero hero-home">
       <div class="hero-copy">
-        <p class="eyebrow">Writers in the Kemptville area</p>
-
-        <h1>Stay connected to the writing community.</h1>
-
-        <p>
-          Get the latest KCW meeting dates, writing events, and opportunities
-          to learn and share with other local writers.
-        </p>
-
-        <a class="button button-primary" href="#newsletter">
-          Find your place →
-        </a>
+        <p class="eyebrow">Kemptville writers, learning together</p>
+        <h1>Write, learn, and grow together.</h1>
+        <p>Kemptville Creative Writers is a welcoming, member-led community where writers of all experience levels learn from one another, explore the craft, and make time for their own work.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#featured-event">Attend the next meeting →</a>
+          <a class="button button-light" href="#learning">See what we're learning →</a>
+        </div>
       </div>
     </section>
 
-    <section class="newsletter-reasons">
-      <div class="reasons-inner">
-        <h2>Why join the KCW newsletter?</h2>
-
-        <div class="reason-grid">
-          <div class="reason">
-            <span class="reason-icon">▦</span>
-            <div>
-              <h3>Know what's coming up</h3>
-              <p>Meeting dates, guest speakers, workshops, and special events.</p>
-            </div>
-          </div>
-
-          <div class="reason">
-            <span class="reason-icon">▤</span>
-            <div>
-              <h3>Discover opportunities</h3>
-              <p>Writing activities, resources, and support for local writers.</p>
-            </div>
-          </div>
-
-          <div class="reason">
-            <span class="reason-icon">⌂</span>
-            <div>
-              <h3>Never miss a meeting</h3>
-              <p>Receive schedule changes and optional library closure updates.</p>
-            </div>
-          </div>
-
-          <div class="reason">
-            <span class="reason-icon">✦</span>
-            <div>
-              <h3>Stay connected</h3>
-              <p>Keep in touch with a welcoming community of writers.</p>
-            </div>
+    <section class="home-band home-band--cream featured-section" id="featured-event" aria-labelledby="featured-heading">
+      <div class="home-inner home-inner--event">
+        <div class="featured-event" data-featured-event>
+          <div class="empty-event">
+            <p class="eyebrow">What's next</p>
+            <h2 id="featured-heading">Loading the next event…</h2>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="newsletter-strip" id="newsletter">
-      <div class="newsletter-inner">
-        <div class="newsletter-copy">
-          <span class="leaf-mark">❧</span>
-          <div>
-            <h2>Stay in the Loop</h2>
-            <p>Get updates on meetings, events, and writing opportunities.</p>
-          </div>
+    <section class="home-band home-band--white learning-section" id="learning" aria-labelledby="learning-heading">
+      <div class="home-inner">
+        <div class="section-heading-centered">
+          <p class="eyebrow">The KCW approach</p>
+          <h2 id="learning-heading">How We Learn Together</h2>
         </div>
-
-        <form
-          id="newsletter-form"
-          class="newsletter-form"
-          action="https://script.google.com/macros/s/AKfycbwnZQsalwFQ1PxqV7UMCoCZz2032czonZH-1CRhcKAU-V-7r0tbhkOlCTF9N5r1L3ON/exec"
-          method="POST"
-        >
-          <div class="form-helper">
-            <label for="middle_name">Middle Name</label>
-            <input id="middle_name" name="middle_name" type="text" autocomplete="one-time-code" tabindex="-1">
-          </div>
-
-          <input class="form-checksum" type="text" name="checksum" value="abc123" tabindex="-1">
-          <input type="hidden" name="interacted" value="no">
-          <input type="hidden" name="form_started" id="form_started">
-
-          <div>
-            <label for="name">Name (optional)</label>
-            <input id="name" name="name" type="text">
-          </div>
-
-          <div>
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required>
-          </div>
-
-          <button class="button button-primary" type="submit">Join Newsletter</button>
-
-          <label class="newsletter-option">
-            <input type="checkbox" name="weekly_calendar" value="yes">
-            Send me weekly updates about KCW meetings, events, library hours, and local weather
-          </label>
-        </form>
-
-        <div id="newsletter-message" class="form-message" role="status"></div>
+        <div class="learning-grid">
+          <article class="learning-card"><span class="feature-icon" aria-hidden="true">◉</span><h3>Learn From One Another</h3><p>Members bring different genres, experiences, questions, and writing approaches to the conversation.</p></article>
+          <article class="learning-card"><span class="feature-icon" aria-hidden="true">▤</span><h3>Explore the Craft</h3><p>Meetings explore writing techniques, creative practice, publishing, and the many ways writers work.</p></article>
+          <article class="learning-card"><span class="feature-icon" aria-hidden="true">✎</span><h3>Put Ideas Into Practice</h3><p>Writing exercises, discussion, and dedicated writing time help turn ideas and lessons into work.</p></article>
+          <article class="learning-card"><span class="feature-icon" aria-hidden="true">✦</span><h3>Share Knowledge Generously</h3><p>Guest speakers and experienced members contribute perspectives while everyone learns from one another.</p></article>
+        </div>
       </div>
     </section>
 
-    <section class="section home-panels">
-      <div class="grid-3">
-        <article class="panel home-panel">
-          <h2>About KCW</h2>
+    <section class="home-band home-band--sage outcomes-section" aria-labelledby="outcomes-heading" data-event-outcomes>
+      <div class="home-inner">
+        <div class="outcomes-heading">
+          <p class="eyebrow">For the featured meeting</p>
+          <h2 id="outcomes-heading" data-outcomes-title>What to expect</h2>
+        </div>
+        <div class="outcomes-grid">
+          <div><h3>What We'll Explore</h3><p data-outcome-explore></p></div>
+          <div><h3>You'll Leave With</h3><p data-outcome-leave></p></div>
+          <div><h3>Tonight's Format</h3><p data-outcome-format></p></div>
+        </div>
+      </div>
+    </section>
 
-          <p>
-            Kemptville Creative Writers (KCW) brings together writers of all levels, from those 
-			just beginning to write to experienced and published authors. Our members write across 
-			genres and forms, including fiction, non-fiction, poetry and memoir.
-          </p>
-
-          <p>
-            We meet to write, share ideas, explore the craft of writing, and learn from authors
-            and subject-matter experts. It's a place to develop your writing, connect with other
-            writers, and encourage one another along the way.
-          </p>
-
-          <a class="home-link" href="about.html">Learn more about us →</a>
-        </article>
-
-        <article class="panel home-panel">
-          <h2>Next Meeting</h2>
-
-          <p>
-            <strong>Monday evenings</strong><br>
-            6:00 p.m. – 7:50 p.m.
-          </p>
-
-          <div class="meta">
-            <div>
-              <strong>Where</strong>
-              North Grenville Public Library<br>
-              Tallman Room
-            </div>
-
-            <div>
-              <strong>When</strong>
-              January–May and September–December
-            </div>
-
-            <div>
-              <strong>Membership</strong>
-              Free — new members welcome.
-            </div>
-          </div>
-
+    <section class="home-band home-band--white upcoming-section" aria-labelledby="upcoming-heading">
+      <div class="home-inner">
+        <div class="section-heading-row">
+          <div><p class="eyebrow">What's coming up</p><h2 id="upcoming-heading">Upcoming Events</h2></div>
           <a class="home-link" href="schedule.html">View full schedule →</a>
-        </article>
+        </div>
+        <div class="event-grid" data-upcoming-events></div>
+      </div>
+    </section>
 
-        <article class="panel home-panel">
-          <h2>What to Expect</h2>
+    <section class="home-band home-band--white visitor-section" aria-labelledby="visitor-heading">
+      <div class="home-inner visitor-simple">
+        <div class="visitor-intro">
+          <p class="eyebrow">Thinking about your first meeting?</p>
+          <h2 id="visitor-heading">First-Time Visitors</h2>
+          <p>New to KCW? You don't need to prepare anything special. Come to a meeting, meet other writers, and participate as much or as little as feels comfortable.</p>
+          <a class="button" href="about.html">Learn more about attending →</a>
+        </div>
+        <div class="visitor-list">
+          <ul class="checks"><li>No advance submission required</li><li>All genres and experience levels welcome</li><li>Participation is optional and flexible</li><li>Notebook or laptop optional</li></ul>
+          <ul class="checks"><li>Attendance is free</li><li>Meetings are held in the Tallman Room</li><li>Check the schedule for changes</li><li>Arrive a few minutes early if you can</li></ul>
+        </div>
+      </div>
+    </section>
 
-          <ul class="checks">
-            <li>Writing exercises</li>
-            <li>Group discussions</li>
-            <li>Supportive community</li>
-            <li>Guest authors &amp; speakers</li>
-          </ul>
-
-          <p><em>All are welcome!</em></p>
-        </article>
+    <section class="newsletter-strip" id="newsletter" aria-labelledby="newsletter-heading">
+      <div class="newsletter-inner">
+        <div class="newsletter-copy"><span class="leaf-mark" aria-hidden="true">❧</span><div><h2 id="newsletter-heading">Stay in the Loop</h2><p>Get updates on meetings, events, and writing opportunities.</p></div></div>
+        <form id="newsletter-form" class="newsletter-form" action="https://script.google.com/macros/s/AKfycbwnZQsalwFQ1PxqV7UMCoCZz2032czonZH-1CRhcKAU-V-7r0tbhkOlCTF9N5r1L3ON/exec" method="POST">
+          <div class="form-helper"><label for="middle_name">Middle Name</label><input id="middle_name" name="middle_name" type="text" autocomplete="one-time-code" tabindex="-1"></div>
+          <input class="form-checksum" type="text" name="checksum" value="abc123" tabindex="-1">
+          <input type="hidden" name="interacted" value="no"><input type="hidden" name="form_started" id="form_started">
+          <div><label for="name">Name (optional)</label><input id="name" name="name" type="text"></div>
+          <div><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+          <button class="button button-primary" type="submit">Join Newsletter</button>
+          <label class="newsletter-option"><input type="checkbox" name="weekly_calendar" value="yes"> Send me weekly updates about KCW meetings, events, library hours, and local weather</label>
+        </form>
+        <div id="newsletter-message" class="form-message" role="status" aria-live="polite"></div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <span>© 2026 Kemptville Creative Writers</span>
+  <footer class="site-footer"><div class="footer-inner"><div><strong>Kemptville Creative Writers</strong><span>Where stories find their voice</span></div><nav aria-label="Footer navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="schedule.html">Schedule</a><a href="archive.html">Archive</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></nav><span>© 2026 Kemptville Creative Writers</span></div></footer>
 
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="schedule.html">Schedule</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy</a>
-      </nav>
-
-      <span>Where stories find their voice</span>
-    </div>
-  </footer>
-
+  <script src="data/events.js"></script>
+  <script src="data/announcements.js"></script>
   <script src="scripts/site.js"></script>
+  <script src="scripts/events.js"></script>
   <script src="scripts/form-helpers.js"></script>
 </body>
 </html>

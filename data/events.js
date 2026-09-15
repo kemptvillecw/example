@@ -1,0 +1,26 @@
+window.KCW_EVENTS = [
+  {
+    id: "ross-fattori-self-publishing-2026-09-21",
+    date: "2026-09-21",
+    startTime: "18:00",
+    endTime: "19:50",
+    type: "Guest Speaker",
+    title: "Ross Fattori – Journey to Self-Publishing",
+    eventTitle: "Journey to Self-Publishing",
+    description: "Author and freelance writer Ross Fattori shares his journey to self-publishing and the lessons learned along the way. Ross is the author of A European Travelogue and the crime novels A Case Against the Clock and The Ghosts of Willow Beach, with writing also published in the Toronto Star, Toronto Sun, and community newspapers.",
+    learningTopic: "The journey to self-publishing",
+    learningOutcome: "Insights from an author's experience of taking a writing project toward self-publishing.",
+    format: "Presentation and discussion",
+    speaker: "Ross Fattori",
+    speakerRole: "Author",
+    speakerUrl: "https://www.rossfattori.com/", // Optional: add the author's confirmed website URL when available.
+    timezone: "America/Toronto",
+    location: "North Grenville Public Library — Tallman Room",
+    address: "105 Prescott Street, Kemptville, ON",
+    directions: "https://www.google.com/maps/search/?api=1&query=North+Grenville+Public+Library+105+Prescott+Street+Kemptville+ON",
+    status: "Published",
+    featured: true,
+    featureStart: "2026-09-01",
+    featureEnd: "2026-09-22"
+  }
+];
