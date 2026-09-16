@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   const e = document.getElementById("pref-email-display");
   const w = document.getElementById("pref-weekly");
 
-  const c = new URLSearchParams(location.search).get("code");
+  const c = (new URLSearchParams(location.hash.slice(1)).get("code") ||
+    new URLSearchParams(location.search).get("code") || "").trim();
   const base =
     "https://script.google.com/macros/s/AKfycbwnZQsalwFQ1PxqV7UMCoCZz2032czonZH-1CRhcKAU-V-7r0tbhkOlCTF9N5r1L3ON/exec";
 
