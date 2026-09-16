@@ -4,9 +4,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   const f = document.getElementById("preferences-form");
   const e = document.getElementById("pref-email-display");
   const w = document.getElementById("pref-weekly");
+  const b = f.querySelector("button[type='submit']");
 
-  const c = (new URLSearchParams(location.hash.slice(1)).get("code") ||
-    new URLSearchParams(location.search).get("code") || "").trim();
+  const c = (
+    new URLSearchParams(location.hash.slice(1)).get("code") ||
+    new URLSearchParams(location.search).get("code") ||
+    ""
+  ).trim();
+
   const base =
     "https://script.google.com/macros/s/AKfycbwnZQsalwFQ1PxqV7UMCoCZz2032czonZH-1CRhcKAU-V-7r0tbhkOlCTF9N5r1L3ON/exec";
 
@@ -22,6 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const r = await fetch(
       base + "?action=update_preferences&code=" + encodeURIComponent(c)
     );
+
     const j = await r.json();
 
     if (j.status !== "ok") throw 0;
@@ -29,6 +35,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     e.textContent = "Email: " + (j.email || "");
     w.checked = j.weekly_calendar === "Yes";
     m.textContent = "Update your newsletter preferences below.";
+
+    // Preferences are now fully loaded and displayed.
+    // Allow the user to save changes.
+    b.disabled = false;
   } catch (_) {
     m.textContent = "Unable to load preferences.";
     s.textContent = "Please try again later.";
@@ -39,9 +49,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   f.addEventListener("submit", async (ev) => {
     ev.preventDefault();
+
     s.className = "form-message";
 
-    const b = f.querySelector("button");
+    // Prevent multiple submissions while the save request is running.
     b.disabled = true;
 
     try {
@@ -54,7 +65,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       const r = await fetch(base, {
         method: "POST",
         body: d,
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
       });
 
       const j = await r.json();
@@ -70,6 +83,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       s.className = "form-message error";
     }
 
+    // Saving has finished, so allow another submission.
     b.disabled = false;
   });
 });
