@@ -110,10 +110,15 @@
         <span>${formatMonth(event.date)}</span><strong>${formatDay(event.date)}</strong><small>${event.date.slice(0, 4)}</small>
       </div>
       <div class="featured-event-content">
+        <div class="featured-event-intro${event.image ? " featured-event-intro--with-image" : ""}">
+          ${event.image ? `<img class="featured-event-photo" src="${event.image}" alt="${event.imageAlt || ""}" loading="lazy" decoding="async">` : ""}
+          <div>
         <span class="event-type event-type-${typeClass(event.type)}">${isFeatured(event, today) ? "Featured Event · " + event.type : event.type}</span>
         ${speakerMarkup(event, "featured-speaker")}
         <h2>${event.eventTitle || event.title}</h2>
         <p class="featured-event-description">${event.description}</p>
+          </div>
+        </div>
         ${renderEventMeta(event)}
         <div class="event-actions">
           <a class="button button-primary" href="${calendarUrl(event)}" target="_blank" rel="noopener">Add to Calendar</a>
@@ -121,6 +126,13 @@
           <a class="button" href="schedule.html#${event.id}">Event Details</a>
         </div>
       </div>`;
+
+    const photo = target.querySelector(".featured-event-photo");
+    if (photo) {
+      const usesSpeakerName = event.type === "Guest Speaker" || event.type === "Author" || event.speakerRole === "Author";
+      const hoverText = usesSpeakerName ? event.speaker : event.hoverText;
+      if (hoverText) photo.title = hoverText;
+    }
   }
 
   function renderLearningOutcomes() {

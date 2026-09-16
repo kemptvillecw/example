@@ -22,6 +22,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Keep centered content aligned on both short and scrollable pages. */
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -129,8 +131,12 @@ a {
 .hero-schedule {
   background-image:
     linear-gradient(90deg, rgba(24, 22, 17, 0.78), rgba(24, 22, 17, 0.2)),
-    url("../images/schedule-hero-optimized.png");
+    var(--schedule-hero-image, url("../images/schedule-hero-optimized.png"));
   background-position: center center;
+}
+
+.hero-archive {
+  --schedule-hero-image: url("../images/archive-hero-optimized.png");
 }
 
 .hero-contact {
@@ -182,6 +188,17 @@ a {
 .hero-unsubscribed .hero-copy {
   padding-top: clamp(22px, 4vw, 32px);
   padding-bottom: clamp(22px, 4vw, 32px);
+}
+
+/* Keep the main interior-page heroes aligned on desktop. */
+@media (min-width: 701px) {
+  .hero-about,
+  .hero-schedule,
+  .hero-archive,
+  .hero-contact {
+    height: 380px;
+    min-height: 380px;
+  }
 }
 
 .hero-copy {
@@ -644,6 +661,27 @@ main {
   font-size: 0.8rem;
 }
 
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-inner nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.footer-inner nav a {
+  white-space: nowrap;
+  text-underline-offset: 3px;
+}
+
+.footer-inner p {
+  margin: 0;
+}
+
 .form-helper,
 .form-checksum {
   display: none;
@@ -814,7 +852,7 @@ main {
         rgba(24, 22, 17, 0.08),
         rgba(24, 22, 17, 0.75)
       ),
-      url("../images/schedule-hero-optimized.png");
+      var(--schedule-hero-image, url("../images/schedule-hero-optimized.png"));
   }
 
   .hero-contact {
@@ -1700,6 +1738,33 @@ main {
 }
 
 /* Learning section */
+.featured-event-intro--with-image {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  align-items: start;
+  gap: 24px;
+}
+
+.featured-event-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: 45% center;
+  border-radius: 8px;
+}
+
+@media (max-width: 850px) {
+  .featured-event-intro--with-image {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .featured-event-photo {
+    max-width: 240px;
+  }
+}
+
 .learning-section {
   padding: 38px 0 42px;
 }

@@ -13,10 +13,13 @@ window.KCW_EVENTS = [
     format: "Presentation and discussion",
     speaker: "Ross Fattori",
     speakerRole: "Author",
+    image: "images/authors/author_ross_fattori.jpg", // Optional featured-event photo.
+    imageAlt: "Ross Fattori",
+    hoverText: "", // Photo tooltip for other events; Guest Speaker or Author uses speaker.
     speakerUrl: "https://www.rossfattori.com/", // Optional: add the author's confirmed website URL when available.
     timezone: "America/Toronto",
     location: "North Grenville Public Library — Tallman Room",
-    address: "105 Prescott Street, Kemptville, ON",
+    address: "1 Water Street, Kemptville, ON",
     directions: "https://www.google.com/maps/search/?api=1&query=North+Grenville+Public+Library+105+Prescott+Street+Kemptville+ON",
     status: "Published",
     featured: true,
