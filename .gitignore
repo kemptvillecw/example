@@ -1,0 +1,10 @@
+# Local preview tooling and documentation
+/preview-server.cjs
+/CALENDAR.md
+
+# Local tests
+/tests/
+
+# Obsolete backup files
+/scripts/form-helpers-old.js
+/styles/styles_backup.css

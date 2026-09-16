@@ -30,6 +30,22 @@
     <section class="hero hero-schedule"><div class="hero-copy"><p class="eyebrow">Meetings, guest speakers, workshops, and writing time</p><h1>Schedule &amp; Events</h1><p>Check what's coming up before you attend. Special events and schedule changes will appear here.</p></div></section>
     <section class="page-content">
       <div class="schedule-layout"><div><div class="schedule-events" data-schedule-events></div></div><aside class="panel schedule-info"><p class="eyebrow">Regular rhythm</p><h2 class="section-title">Monday Night at KCW</h2><p>KCW meets on Monday evenings from <strong>6:00 to 7:50 p.m.</strong> during the January–May and September–December seasons.</p><p>Meetings may include writing time, discussion, craft exploration, guest speakers, or workshops. Special events can change the usual format.</p><p><strong>New writers are welcome.</strong> Check this page for the latest event information before attending.</p><a class="button button-primary" href="index.html#newsletter">Join the newsletter</a></aside></div>
+      <section class="schedule-calendar panel" aria-labelledby="calendar-heading" data-public-calendar>
+        <div class="schedule-calendar-heading">
+          <div><p class="eyebrow">Plan your next visit</p><h2 class="section-title" id="calendar-heading">KCW Calendar</h2></div>
+          <a class="button" href="https://calendar.google.com/calendar/ical/kemptvillecw%40gmail.com/public/basic.ics">Subscribe to calendar</a>
+        </div>
+        <p>Upcoming KCW meetings and events.</p>
+        <p data-calendar-status role="status">Loading upcoming events…</p>
+        <button class="button" type="button" data-calendar-retry hidden>Try again</button>
+        <div class="schedule-calendar-table-wrap" data-calendar-table-wrap role="region" aria-label="Upcoming calendar events" tabindex="0" hidden>
+          <table class="schedule-calendar-table" aria-labelledby="calendar-heading">
+            <thead><tr><th scope="col">Date</th><th scope="col">Time (EST)</th><th scope="col">Event</th></tr></thead>
+            <tbody data-calendar-rows></tbody>
+          </table>
+        </div>
+        <noscript><p>Enable JavaScript to view the KCW Calendar.</p></noscript>
+      </section>
     </section>
   </main>
   <footer class="site-footer">
@@ -50,4 +66,5 @@
     </div>
   </footer>
   <script src="data/events.js"></script><script src="data/announcements.js"></script><script src="scripts/site.js"></script><script src="scripts/events.js"></script>
+  <script src="data/calendar.js"></script><script src="scripts/calendar.js"></script>
 </body></html>

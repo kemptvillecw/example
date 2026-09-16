@@ -1321,6 +1321,11 @@ main {
   gap: 14px;
 }
 
+.event-grid > .empty-state {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
 .event-card {
   background: var(--paper);
   border: 1px solid var(--line);
@@ -1370,6 +1375,36 @@ main {
 .visitor-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 25px; margin: 10px 0 16px; }
 .visitor-list .checks { margin: 0; }
 
+.schedule-calendar { margin-top: 28px; min-width: 0; }
+.schedule-calendar-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+.schedule-calendar-heading h2 { margin-bottom: 0; }
+.schedule-calendar [hidden] { display: none; }
+.schedule-calendar-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; }
+.schedule-calendar-table-wrap:focus-visible { outline: 3px solid var(--forest); outline-offset: 4px; }
+.schedule-calendar-table { width: 100%; border-collapse: collapse; text-align: left; font-size: .95rem; }
+.schedule-calendar-table th { background: var(--forest); color: white; font: 700 .8rem Arial, sans-serif; letter-spacing: .04em; }
+.schedule-calendar-table th, .schedule-calendar-table td { padding: 16px; vertical-align: top; }
+.schedule-calendar-table td { border-top: 1px solid var(--line); }
+.schedule-calendar-table tbody tr:nth-child(even) { background: var(--mint); }
+.schedule-calendar-table td:first-child { min-width: 145px; }
+.schedule-calendar-table td:nth-child(2) { min-width: 140px; }
+.schedule-calendar-table td:nth-child(3) { min-width: 220px; overflow-wrap: anywhere; }
+.schedule-calendar-table strong { color: var(--forest-dark); }
+.schedule-calendar-table details { margin-top: 8px; }
+.schedule-calendar-table summary { color: var(--forest); cursor: pointer; }
+.schedule-calendar-table details p { white-space: pre-line; font-size: .9rem; }
+.schedule-calendar [data-calendar-status] { color: var(--muted); font-size: .9rem; }
+@media (max-width: 700px) {
+  .schedule-calendar-table-wrap { overflow: visible; border: 0; }
+  .schedule-calendar-table,
+  .schedule-calendar-table tbody { display: block; }
+  .schedule-calendar-table thead { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .schedule-calendar-table tbody tr { display: block; border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+  .schedule-calendar-table tbody tr + tr { margin-top: 12px; }
+  .schedule-calendar-table tbody td:nth-child(n) { display: block; min-width: 0; width: 100%; border: 0; padding: 0; overflow-wrap: anywhere; }
+  .schedule-calendar-table tbody td + td { margin-top: 12px; }
+  .schedule-calendar-table tbody td::before { content: attr(data-label); display: block; margin-bottom: 4px; color: var(--muted); font: 700 .75rem Arial, sans-serif; letter-spacing: .04em; }
+}
 .schedule-events { display: grid; gap: 14px; }
 
 .schedule-event {
@@ -1603,10 +1638,6 @@ main {
 }
 
 .featured-event-mark { display: none; }
-
-.event-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
 
 .event-card {
   grid-template-columns: 82px minmax(0, 1fr);
