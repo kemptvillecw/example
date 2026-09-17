@@ -36,8 +36,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     switch (json?.status) {
       case "confirmed":
-        showResult("Subscription Confirmed!",
-          "Thanks for joining Kemptville Creative Writers. You'll soon receive a welcome e-mail and then periodic newsletters.", true);
+        if (json.email_accepted === false) {
+          showResult("Subscription Confirmed!", json.message ||
+            "Your subscription is confirmed, but we could not confirm that your welcome email was sent.", true);
+        } else {
+          showResult("Subscription Confirmed!",
+            "Thanks for joining Kemptville Creative Writers. Please check your inbox and spam folder for your welcome email.", true);
+        }
         break;
       case "already_confirmed":
         showResult("Already Confirmed",

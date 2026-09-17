@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const submitButton = form.querySelector("button[type='submit']");
     const defaultButtonText = submitButton ? submitButton.textContent : "Join Newsletter";
+    if (submitButton?.disabled) return;
 
     if (isBotSubmission()) {
       showFakeSuccess();
@@ -91,6 +92,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         form.reset();
         restoreSpamFields();
+      } else if (result.status === "email_not_accepted") {
+        const seconds = Number(result.retry_after_seconds);
+        const minutes = Number.isFinite(seconds) && seconds > 0 ? Math.ceil(seconds / 60) : 10;
+        messageBox.textContent = result.message ||
+          "Your subscription is awaiting confirmation, but email acceptance could not be confirmed. Please try again in " +
+          minutes + (minutes === 1 ? " minute." : " minutes.");
+        messageBox.classList.add("error");
+        if (submitButton) submitButton.disabled = false;
       } else if (result.status === "already_pending") {
         const seconds = Number(result.retry_after_seconds);
         const minutes = Number.isFinite(seconds) && seconds > 0
