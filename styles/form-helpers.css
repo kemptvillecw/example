@@ -2,3 +2,25 @@
 .form-message{font-size:.82rem;padding:10px 14px;border-radius:6px;display:none}
 .form-message.success{display:block;background:var(--success-bg,#f0f6ef);color:var(--forest-dark,#063d31);border:1px solid var(--success-border,#b8cdb8)}
 .form-message.error{display:block;background:var(--error-bg,#faf0f0);color:#6b2a2a;border:1px solid var(--error-border,#ddb8b8)}
+
+/* Inline loading indicator, removed when the preferences message is replaced. */
+.preferences-spinner {
+  display: inline-block;
+  width: 0.85em;
+  height: 0.85em;
+  margin-right: 0.5em;
+  vertical-align: -0.1em;
+  box-sizing: border-box;
+  border: 2px solid var(--success-border, #b8cdb8);
+  border-top-color: var(--forest-dark, #063d31);
+  border-radius: 50%;
+  animation: preferences-spin 0.8s linear infinite;
+}
+
+@keyframes preferences-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preferences-spinner { animation: none; }
+}
